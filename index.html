@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adunare Numere</title>
+    <script>
+        function adunaNumere() {
+            const numar1 = parseFloat(document.getElementById('numar1').value) || 0;
+            const numar2 = parseFloat(document.getElementById('numar2').value) || 0;
+            const suma = numar1 + numar2;
+            document.getElementById('rezultat').innerText = 'Suma: ' + suma;
+        }
+    </script>
+</head>
+<body>
+    <h1>Adunare Numere</h1>
+    <label for="numar1">Număr 1:</label>
+    <input type="number" id="numar1" oninput="adunaNumere()">
+    <br>
+    <label for="numar2">Număr 2:</label>
+    <input type="number" id="numar2" oninput="adunaNumere()">
+    <br>
+    <button onclick="adunaNumere()">Calculează</button>
+    <h2 id="rezultat">Suma: 0</h2>
+</body>
+</html>
