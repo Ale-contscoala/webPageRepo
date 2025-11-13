@@ -1,27 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adunare Numere</title>
-    <script>
-        function adunaNumere() {
-            const numar1 = parseFloat(document.getElementById('numar1').value) || 0;
-            const numar2 = parseFloat(document.getElementById('numar2').value) || 0;
-            const suma = numar1 + numar2;
-            document.getElementById('rezultat').innerText = 'Suma: ' + suma;
-        }
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calculator Sumă</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Adunare Numere</h1>
-    <label for="numar1">Număr 1:</label>
-    <input type="number" id="numar1" oninput="adunaNumere()">
-    <br>
-    <label for="numar2">Număr 2:</label>
-    <input type="number" id="numar2" oninput="adunaNumere()">
-    <br>
-    <button onclick="adunaNumere()">Calculează</button>
-    <h2 id="rezultat">Suma: 0</h2>
+  <main>
+    <h1>Calculator simplu</h1>
+    <form id="sum-form" aria-describedby="result" onsubmit="return false;">
+      <div class="field">
+        <label for="num1">Număr 1</label>
+        <input type="number" id="num1" name="num1" inputmode="decimal" step="any" />
+      </div>
+
+      <div class="field">
+        <label for="num2">Număr 2</label>
+        <input type="number" id="num2" name="num2" inputmode="decimal" step="any" />
+      </div>
+
+      <div class="actions">
+        <button id="calc-btn" type="button">Calculează</button>
+      </div>
+    </form>
+
+    <div id="result" class="result" aria-live="polite">Suma: <strong id="sum">0</strong></div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

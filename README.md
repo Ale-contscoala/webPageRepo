@@ -1,10 +1,12 @@
-# webPageRepo
-# Adunator HTML
+Calculator simplu — pagină statică
 
-O pagină simplă care adună două numere și afișează rezultatul.
+Fișiere generate în acest folder:
+- `index.html` — pagina principală
+- `style.css` — stiluri minimale
+- `script.js` — logica pentru calcul
 
-## Rulare
-Deschide `index.html` în browser.
+Deschide `index.html` în browser pentru a utiliza pagina. În PowerShell poți folosi:
 
-## Exemplu
-Introdu **2.5** și **3.5** → afișează **6**.
+Start-Process .\index.html
+
+Alternativ, instalează extensia Live Server în VS Code și apasă "Go Live" pentru previzualizare.
